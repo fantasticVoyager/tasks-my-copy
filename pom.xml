@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>me.keithrasweiler</groupId>
-    <artifactId>tasks</artifactId>
+    <artifactId>tasks-my-copy</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>tasks</name>
     <description>pring Boot Tasks Application with Angular</description>
