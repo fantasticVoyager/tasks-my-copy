@@ -20,14 +20,18 @@ export class TasksListComponent implements OnInit {
         .subscribe(
             (data: any) => this.tasks = data
         );
+
+      this.taskService.onTaskAdded.subscribe(
+          (task: Task) => this.tasks.push(task)
+      );
   }
 
     getDueDateLabel(task: Task) {
-      return task.completed ? 'label-success' : 'label-primary';
+      return task.completed ? 'alert-success' : 'alert-primary';
     }
 
     onTaskChange(event, task: Task) {
-      this.taskService.saveTask(task, event.target.checked)
+      this.taskService.updateTask(task, event.target.checked)
           .subscribe(
               (data: any) => console.log(data)
           );
